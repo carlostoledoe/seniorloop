@@ -62,6 +62,12 @@ header {
     color: var(--primary);
 }
 
+.hero-tagline {
+    font-size: 24px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
 .hero p {
     font-size: 20px;
     max-width: 800px;
@@ -85,6 +91,85 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Problema section */
+.problem {
+    padding: 80px 0;
+    background-color: #f0f5ff;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.problem-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.problem-card h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.problem-list {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.problem-list li {
+    margin-bottom: 15px;
+}
+
+/* Solution section */
+.solution {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.steps {
+    margin-bottom: 50px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.step-number {
+    background-color: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.solution-image {
+    text-align: center;
+}
+
+.solution-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Features section */
 .features {
     padding: 80px 0;
     background-color: white;
@@ -99,7 +184,7 @@ header {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
@@ -109,6 +194,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
+    background-color: white;
 }
 
 .feature-card:hover {
@@ -128,9 +214,35 @@ header {
     color: var(--primary);
 }
 
-.about {
+/* Differences section */
+.differences {
     padding: 80px 0;
     background-color: #f9f9f9;
+}
+
+.differences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.difference-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.difference-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* About section */
+.about {
+    padding: 80px 0;
+    background-color: white;
 }
 
 .about-content {
@@ -141,6 +253,16 @@ header {
 
 .about-text {
     flex: 1;
+}
+
+.mission-list {
+    list-style-position: inside;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+.mission-list li {
+    margin-bottom: 15px;
 }
 
 .about-image {
@@ -154,6 +276,7 @@ header {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Coming soon section */
 .coming-soon {
     padding: 80px 0;
     text-align: center;
@@ -170,6 +293,22 @@ header {
     font-size: 20px;
     max-width: 600px;
     margin: 0 auto 30px;
+}
+
+.interested-text {
+    margin-bottom: 40px;
+}
+
+.benefits-list {
+    list-style-position: inside;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    display: inline-block;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
 }
 
 .email-form {
@@ -202,6 +341,7 @@ header {
     background-color: #d9a760;
 }
 
+/* Footer */
 footer {
     background-color: var(--dark);
     color: white;
@@ -218,6 +358,7 @@ footer {
     font-size: 20px;
     margin: 0 10px;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .social-link:hover {
@@ -239,7 +380,8 @@ footer {
         font-size: 18px;
     }
     
-    .about-content {
+    .about-content,
+    .step {
         flex-direction: column;
     }
     
@@ -250,5 +392,9 @@ footer {
     .submit-button {
         width: 100%;
         padding: 15px;
+    }
+    
+    .step-number {
+        margin-bottom: 15px;
     }
 }
